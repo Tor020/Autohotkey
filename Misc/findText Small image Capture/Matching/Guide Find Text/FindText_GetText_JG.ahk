@@ -44,6 +44,16 @@ Currently captured screen image text, to be USED ON OTHER COMPUTERS, you must us
 ===========================================
 */
 
+; *$CapsLock::
+; Reload
+; Sleep, 1000 ; If successful, the reload will close this instance during the Sleep, so the line below will never be reached.
+; ; MsgBox, 4, , The script could not be reloaded. Would you like to open it for editing?
+; ; IfMsgBox, Yes, Edit
+; Return
+; F3::Suspend, Toggle
+
+
+
 #NoEnv
 #SingleInstance Force
 SetBatchLines, -1
@@ -60,7 +70,7 @@ Menu, Tray, Click, 1
 
 ;----------------------------
 ; The capture range can be changed by adjusting the numbers
-ww:=35, hh:=12
+ww:=40, hh:=40
 ;----------------------------
 nW:=2*ww+1, nH:=2*hh+1
 Gosub, MakeCaptureWindow
