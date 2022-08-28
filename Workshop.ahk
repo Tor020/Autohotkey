@@ -5,29 +5,31 @@
 
 
 ; https://sharats.me/posts/the-magic-of-autohotkey/#mess-with-images-in-clipboard 
-    Menu, Tray, Add, Add border to image in clipboard, AddBorderToImageInCb ; Tray menu is right clicking on the autohotkey icon 
-    AddBorderToImageInCb() {
-        RunWait, C:\tools\ImageMagick\magick.exe convert clipboard:myimage -bordercolor "#0099FF" -border 6x6 clipboard:, , Hide
-        MsgBox, Added border to image in clipboard.
-    }
+  Menu, Tray, Add, Add border to image in clipboard, AddBorderToImageInCb ; Tray menu is right clicking on the autohotkey icon 
+  AddBorderToImageInCb() {
+      RunWait, C:\tools\ImageMagick\magick.exe convert clipboard:myimage -bordercolor "#0099FF" -border 6x6 clipboard:, , Hide
+      MsgBox, Added border to image in clipboard.
+  }
 
 
-    Menu, Tray, Add, ImgMagick1, ImgMagick1 
-    ImgMagick1() {
-        RunWait,\( +clone +repage -alpha off -fx 'rand()' -shade 120x30 \ -fill grey70 -colorize 60 \ -fill lavender -tint 100 \) \ +swap -composite logo_3D_bg.jpg
-                  MsgBox, Added border to image in clipboard.
-    }
+  Menu, Tray, Add, ImgMagick1, ImgMagick1 
+  ImgMagick1() {
+      RunWait,\( +clone +repage -alpha off -fx 'rand()' -shade 120x30 \ -fill grey70 -colorize 60 \ -fill lavender -tint 100 \) \ +swap -composite logo_3D_bg.jpg
+                MsgBox, Added border to image in clipboard.
+  }
 
-:*:]d::  ; This hotstring replaces "]d" with the current date and time via the commands below.
-FormatTime, CurrentDateTime,, M/d/yyyy h:mm tt  ; It will look like 9/1/2005 3:53 PM
-SendInput %CurrentDateTime%
-return
 
 #i::Send #b{Right}{Right}{Enter} ; https://sharats.me/posts/the-magic-of-autohotkey/#open-the-toolbar-calendar ' windows + i '
 Return
 
 #v::SendInput, {Raw}%Clipboard% ; https://sharats.me/posts/the-magic-of-autohotkey/#type-clipboard-contents Types out clipboard contents ' windows + v '
 Return
+
+:*:]d::  ; This hotstring replaces "]d" with the current date and time via the commands below.
+  FormatTime, CurrentDateTime,, M/d/yyyy h:mm tt  ; It will look like 9/1/2005 3:53 PM
+  SendInput %CurrentDateTime%
+return
+
 
 #Include ./Snippets/snippets.ahk  
  ; snippets.ini must be in the same directory as the include statement

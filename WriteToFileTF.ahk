@@ -22,12 +22,24 @@ nuke = "C:\Users\tor00\Desktop\Bash_General Utility Ahk_Python\Autohotkey\WEB\fi
 ::del::
 ; ./WEB/index.html"
 
-Send, {Ctrl down}v{Ctrl up} 
-FileDelete,"./WEB/index_copy.html"
+FileDelete, ./WEB/index_copy.html
+
 ; FileAppend, %TestFile%, TestFile.txt ; create file
 
 
 Return
+
+ 
+::md::
+
+FileTest = ;
+
+
+FileAppend, %FileTest% ./WEB/index_copy.html ; create file
+
+
+Return
+
 
 ^+a::
 TF_InsertLine("./WEB/index.html","2,4,9",5,"---")   
@@ -67,7 +79,7 @@ TF_InsertLine("./WEB/index.html","2,4,9",5,"---")
   MsgBox % TF_ReadLines("./WEB/index.html",5,0,1) ; 0 for end line indicates until end of file, remove trailing empty line.
 
 
-
+ 
   Send, {Ctrl down}v{Ctrl up} 
 
   Return
