@@ -18,6 +18,10 @@
                   MsgBox, Added border to image in clipboard.
     }
 
+:*:]d::  ; This hotstring replaces "]d" with the current date and time via the commands below.
+FormatTime, CurrentDateTime,, M/d/yyyy h:mm tt  ; It will look like 9/1/2005 3:53 PM
+SendInput %CurrentDateTime%
+return
 
 #i::Send #b{Right}{Right}{Enter} ; https://sharats.me/posts/the-magic-of-autohotkey/#open-the-toolbar-calendar ' windows + i '
 Return
