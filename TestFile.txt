@@ -1,0 +1,7 @@
+1 Hi this
+2 a test variable
+3 to demonstrate
+4 how to
+5 use this
+6 new version
+7 of TF.AHK
