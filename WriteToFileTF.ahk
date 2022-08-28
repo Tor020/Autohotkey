@@ -13,8 +13,11 @@ PathDir := "C:\Users\tor00\Desktop\Bash_General Utility Ahk_Python\Autohotkey\WE
 index := "index.html"
 styles :=  "styles\styles.css"
 js := "scripts\main.js"
-root = %PathDir%\%index%
+root = %PathDir%\%index%  ; I would recommend to stay with expression syntax (and :=) instead of using the deprecated =-assignment method:
 MsgBox, %root% ; C:\Users\tor00\Desktop\Bash_General Utility Ahk_Python\WriteToFilePlayGroundAHKWebsite\index.html
+
+
+
 
 
 *$CapsLock::
