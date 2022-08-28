@@ -2,21 +2,18 @@
 SendMode Input
 SetWorkingDir, %A_ScriptDir%
 
+; https://www.autohotkey.com/boards/viewtopic.php?t=576
+; https://github.com/hi5/TF
 #include C:\Users\tor00\Desktop\Bash_General Utility Ahk_Python\AHK-Lib-Directory\TF\tf.ahk
 
 
 ; Directory Target 
 PathDir := "C:\Users\tor00\Desktop\Bash_General Utility Ahk_Python\WriteToFilePlayGroundAHKWebsite"
-root := "index.html"
+index := "index.html"
 styles :=  "styles\styles.css"
 js := "scripts\main.js"
-
-HomeDir := %PathDir%.%root%
-
-
-MsgBox, %PathDir%\%root%
-
-
+root = %PathDir%\%index%
+MsgBox, %root% ; C:\Users\tor00\Desktop\Bash_General Utility Ahk_Python\WriteToFilePlayGroundAHKWebsite\index.html
 
 
 *$CapsLock::
