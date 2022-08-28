@@ -11,6 +11,14 @@
         MsgBox, Added border to image in clipboard.
     }
 
+
+    Menu, Tray, Add, ImgMagick1, ImgMagick1 
+    ImgMagick1() {
+        RunWait,\( +clone +repage -alpha off -fx 'rand()' -shade 120x30 \ -fill grey70 -colorize 60 \ -fill lavender -tint 100 \) \ +swap -composite logo_3D_bg.jpg
+                  MsgBox, Added border to image in clipboard.
+    }
+
+
 #i::Send #b{Right}{Right}{Enter} ; https://sharats.me/posts/the-magic-of-autohotkey/#open-the-toolbar-calendar ' windows + i '
 Return
 
@@ -20,15 +28,12 @@ Return
 #Include ./Snippets/snippets.ahk  
  ; snippets.ini must be in the same directory as the include statement
 
-
-
-
 *$CapsLock::
 Reload
 Sleep, 1000 ; If successful, the reload will close this instance during the Sleep, so the line below will never be reached.
 ; MsgBox, 4, , The script could not be reloaded. Would you like to open it for editing?
 ; IfMsgBox, Yes, Edit
-Return
+  Return
 
 F1::Suspend, Toggle
 Return
