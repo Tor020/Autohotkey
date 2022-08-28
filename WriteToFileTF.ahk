@@ -8,7 +8,8 @@ SetWorkingDir, %A_ScriptDir%
 
 
 ; Directory Target 
-PathDir := "C:\Users\tor00\Desktop\Bash_General Utility Ahk_Python\WriteToFilePlayGroundAHKWebsite"
+; PathDir := "C:\Users\tor00\Desktop\Bash_General Utility Ahk_Python\WriteToFilePlayGroundAHKWebsite"
+PathDir := "C:\Users\tor00\Desktop\Bash_General Utility Ahk_Python\Autohotkey\WEB\"
 index := "index.html"
 styles :=  "styles\styles.css"
 js := "scripts\main.js"
