@@ -9,15 +9,23 @@ SetWorkingDir, %A_ScriptDir%
 
 ; Directory Target 
 ; PathDir := "C:\Users\tor00\Desktop\Bash_General Utility Ahk_Python\WriteToFilePlayGroundAHKWebsite"
-PathDir := "C:\Users\tor00\Desktop\Bash_General Utility Ahk_Python\Autohotkey\WEB\"
+PathDir := "C:\Users\tor00\Desktop\Bash_General Utility Ahk_Python\Autohotkey\WEB"
 index := "index.html"
 styles :=  "styles\styles.css"
 js := "scripts\main.js"
 root = %PathDir%\%index%  ; I would recommend to stay with expression syntax (and :=) instead of using the deprecated =-assignment method:
-MsgBox, %root% ; C:\Users\tor00\Desktop\Bash_General Utility Ahk_Python\WriteToFilePlayGroundAHKWebsite\index.html
+MsgBox, %root% ; C:\Users\tor00\Desktop\Bash_General Utility Ahk_Python\Autohotkey\WEB\index.html
 
 
 
+
+
+
+^+a::
+
+
+
+Return
 
 
 *$CapsLock::
