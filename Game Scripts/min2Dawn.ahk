@@ -73,65 +73,161 @@ NumpadAdd::                   ;                     key +
 
   
 ; Random, rand, 1, 10 ; generates a random number between 1 and 10 and assigns it to the variable 'rand'
-Random, rand, 0, 2
+Random, rand, 0, 8
 
 if (rand = "0")
 {
-; send, `random number is` %rand%
-MouseClick, left, 1040, 375 ;Nova
-MouseClick, left, 281, 1267 ;Ready
 
 }
 else if (rand = "1")
 {
-; send, `random number is` %rand%
-MouseClick, left, 843, 514  ;Mengsk
-MouseClick, left, 281, 1267 ;Ready
-}
 
+}
 else if (rand = "2")
 {
-; send, `random number is` %rand%
-MouseClick, left, 943, 376 ;Alarak
-MouseClick, left, 281, 1267 ;Ready
+
+}
+else if (rand = "4")
+{
+
+}
+else if (rand = "5")
+{
+
+}
+else if (rand = "6")
+{
+
+}
+else if (rand = "7")
+{
+
+}
+else if (rand = "8")
+{
+
 }
 
-
-
-
-; MouseGetPos, xpos, ypos 
-
-
-; Clipboard = %xpos%, %ypos%  ;stores the xpos and ypos from MouseGetPos on the clipboard (ctrl+v)
-
-
 Return
-
 
 ;_███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗
 ;_╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝
 
 
-
-
 NumpadIns::                   ;                      key 0
-    
 
-MouseGetPos, xpos, ypos 
-MouseClick, left, (xpos-254), (ypos-254) 
-MouseClick, left, xpos, ypos
-; SetTimer, FollowMouse, 50
+Random, rand, 0, 8
+if (rand = "0")
+{
+
+MouseClick, left, 111, 176   ;Character select left arrow
+MouseClick, left, 244, 175   ;Shana
+
+}
+else if (rand = "1")
+{
+MouseClick, left, 111, 176   ;Character select left arrow
+MouseClick, left, 449, 169   ;Diamond
+
+}
+else if (rand = "2")
+{
+MouseClick, left, 111, 176   ;Character select left arrow
+MouseClick, left, 668, 165   ;Scarlett
+
+}
+else if (rand = "4")
+{
+MouseClick, left, 111, 176   ;Character select left arrow
+MouseClick, left, 879, 1267  ;Hina 
+
+}
+else if (rand = "5")
+{
+MouseClick, left, 111, 176   ;Character select left arrow
+MouseClick, left, 1085, 163  ;Spark
+
+}
+else if (rand = "6")
+{
+MouseClick, left, 111, 176   ;Character select left arrow
+MouseClick, left, 1303, 166  ;Lilith
+
+}
+else if (rand = "7")
+{
+MouseClick, left, 111, 176   ;Character select left arrow
+MouseClick, left, 1517, 168  ;Abby
+
+}
+else if (rand = "8")
+{
+MouseClick, left, 1647, 177  ;Character select right arrow
+MouseClick, left, 1295, 170  ;Yuki
+
+}
+else if (rand = "9")
+{
+MouseClick, left, 1647, 177  ;Character select right arrow
+MouseClick, left, 1503, 173  ;Luna
+}
 
 
+Return
 
 
+NumpadEnd::                   ;                      key 1
 
+Random, rand, 0, 8
 
+if (rand = "0")
+{
+MouseClick, left, 100, 1278
+MouseClick, left, 236, 1283   ;Pistol    
 
+}
+else if (rand = "1")
+{
+MouseClick, left, 100, 1278
+MouseClick, left, 450, 1284   ;Shotgun
 
+}
+else if (rand = "2")
+{
+MouseClick, left, 100, 1278
+MouseClick, left, 664, 1285   ;Crossbow
 
-return
+}
+else if (rand = "4")
+{
+MouseClick, left, 100, 1278
+MouseClick, left, 887, 1260   ;Flamethrower
 
+}
+else if (rand = "5")
+{
+MouseClick, left, 100, 1278
+MouseClick, left, 1088, 1283  ;Dual SMgs
+
+}
+else if (rand = "6")
+{
+MouseClick, left, 100, 1278
+MouseClick, left, 1306, 1284  ;Batgun
+
+}
+else if (rand = "7")
+{
+MouseClick, left, 100, 1278
+MouseClick, left, 1517, 1281  ;Grenade launcher
+
+}
+else if (rand = "8")
+{
+MouseClick, left, 1663, 1278
+MouseClick, left, 1505, 1288  ;Magic Bow
+
+}
 
 
 Return
@@ -139,13 +235,6 @@ Return
 ;_╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝
 
 +g::
-
-send, {Enter}
-send, (nuke)
-send, (glhf) 
-send, (nuke)
-send, {Enter}
-
 
 
 return
@@ -175,20 +264,6 @@ Return
 
 
 
-NumpadEnd::                   ;                      key 1
-    
-; pet attack
-; MouseClick , WhichButton, X, Y, ClickCount, Speed, DownOrUp, Relative    
-; X1836 Y1376
-
-MouseGetPos, xpos, ypos 
-Send, {b}
-Sleep, 25
-Send, {a}
-MouseClick, left, xpos, ypos
-
-
-Return
 
 ;_███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗
 ;_╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝
@@ -197,32 +272,6 @@ Return
 
 NumpadDown::                  ;                      key 2
 
-
-MouseGetPos, xpos, ypos
-loop, 3{
-
-send, {enter}
-Send, {b}
-Sleep, 5
-Send, {a}
-send, {enter}
-}
-; Send, {b}
-; Sleep, 5
-; Send, {a}
-; MouseClick, left, xpos, ypos,   ;pos 1
-; Send, {b}
-; Sleep, 5
-; Send, {a}
-; MouseClick, left, xpos+255, ypos,     ;pos 2
-; Send, {b}
-; Sleep, 5
-; Send, {a}
-; MouseClick, left, xpos, ypos+255,     ;pos 3
-; Send, {b}
-; Sleep, 5
-; Send, {a}
-; MouseClick, left, xpos+255, ypos+255, ;pos 4
 
 
 
@@ -233,26 +282,10 @@ Return
 
 NumpadPgDn::                  ;                      key 3
 
- 
-Send, {b}
-Sleep, 25
-Send, {a}
-MouseClick, left, xpos, ypos,   ;pos 1
-Send, {b}
-Sleep, 25
-Send, {a}
-MouseClick, left, xpos+255, ypos,     ;pos 2
-Send, {b}
-Sleep, 25
-Send, {a}
-MouseClick, left, xpos, ypos+255,     ;pos 3
-Send, {b}
-Sleep, 25
-Send, {a}
-MouseClick, left, xpos+255, ypos+255, ;pos 4
 
+SendRaw, MouseClick, left, %xpos%, %ypos%     ; fills in auto hotkey send command for key 5 clipboard cordinates                     
 
-
+MouseClick,
 Return
 
 
