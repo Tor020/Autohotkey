@@ -14,7 +14,27 @@
 ; 
   
 
+; MouseMoveLinear(Starting X ,Starting Y, Ending X, Ending Y, Easing Time)  
+MouseMoveLinear(x1,y1,x2,y2,time) {
+    xdiff := x2 - x1
+    ydiff := y2 - y1
+    length := Round(sqrt( ( xdiff * xdiff ) + ( ydiff * ydiff ) ))
+    time := time / 15 ; because ahk sleep makes you sleep for ~15 ms no matter what
 
+    m := ydiff / xdiff
+    b := -m*x1 + y1
+    i := 0
+    Loop, %time% {
+        xn := ((xdiff / time) * i) + x1
+        yn := m*xn + b
+        DllCall("SetCursorPos", int, round(xn), int, round(yn) )
+        i++
+        Sleep, 1
+    }
+    
+    DllCall("SetCursorPos", int, x2, int, y2 )
+}
+; MouseMoveLinear(1566,607, 1376, 807, 700)
 
 
   ;🔺🔺_███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗███████╗
@@ -112,11 +132,13 @@ Return
 ;_╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝
 
 +g::
-
-MouseClick, left, 272, 937 ;wait here for some time (todo: sleep for 15 seconds)
-Sleep, 15000
-MouseClick, left, 232, 284 ;stop waiting
-Sleep, 100
+Send {Lbutton Down}
+MouseMove, 378, 611
+; MouseMoveLinear(1566,607, 1376, 807, 700)
+; MouseClick, left, 272, 937 ;wait here for some time (todo: sleep for 15 seconds)
+; Sleep, 15000
+; MouseClick, left, 232, 284 ;stop waiting
+; Sleep, 100
 
 
 return
@@ -147,6 +169,203 @@ Return
 NumpadLeft::                  ;                      key 4  Beginning of line, select -> back up trims whitespace
 
 
+; MouseClick, left, 139, 802 ;enter smithy
+; Sleep, 1500
+MouseClick, left, 2297, 33 ; Select Free Build
+
+Random, rand, 0, 12
+if (rand = "0")
+{
+MouseClick, left, 595, 575            ; Weapon Option
+Sleep, 300
+MouseClick, left, 1556, 696 ;Randomize
+Sleep, 300
+MouseClick, left, 2126, 1406            ; Forge
+Sleep, 300
+MouseMove, 1566, 607
+Send {Lbutton Down}
+Sleep, 500
+MouseMoveLinear(1566,607, 1376, 807, 700)
+Sleep, 500
+Send {Lbutton Up}
+MouseClick, left, 1280, 1118            ; Done
+}
+else if (rand = "1")
+{
+MouseClick, left, 834, 549            ; Weapon Option
+Sleep, 300
+MouseClick, left, 1556, 696 ;Randomize
+Sleep, 300
+MouseClick, left, 2126, 1406            ; Forge
+Sleep, 300
+MouseMove, 1566, 607
+Send {Lbutton Down}
+Sleep, 500
+MouseMoveLinear(1566,607, 1376, 807, 700)
+Sleep, 500
+Send {Lbutton Up}
+MouseClick, left, 1280, 1118            ; Done
+}
+else if (rand = "2")
+{
+MouseClick, left, 1136, 608            ; Weapon Option
+Sleep, 300
+MouseClick, left, 1556, 696 ;Randomize
+Sleep, 300
+MouseClick, left, 2126, 1406            ; Forge
+Sleep, 300
+MouseMove, 1566, 607
+Send {Lbutton Down}
+Sleep, 500
+MouseMoveLinear(1566,607, 1376, 807, 700)
+Sleep, 500
+Send {Lbutton Up}
+MouseClick, left, 1280, 1118            ; Done
+}
+else if (rand = "4")
+{
+MouseClick, left, 1372, 601            ; Weapon Option
+Sleep, 300
+MouseClick, left, 1556, 696 ;Randomize
+Sleep, 300
+MouseClick, left, 2126, 1406            ; Forge
+Sleep, 300
+MouseMove, 1566, 607
+Send {Lbutton Down}
+Sleep, 500
+MouseMoveLinear(1566,607, 1376, 807, 700)
+Sleep, 500
+Send {Lbutton Up}
+MouseClick, left, 1280, 1118            ; Done
+}
+else if (rand = "5")
+{
+MouseClick, left, 1658, 535            ; Weapon Option
+Sleep, 300
+MouseClick, left, 1556, 696 ;Randomize
+Sleep, 300
+MouseClick, left, 2126, 1406            ; Forge
+Sleep, 300
+MouseMove, 1566, 607
+Send {Lbutton Down}
+Sleep, 500
+MouseMoveLinear(1566,607, 1376, 807, 700)
+Sleep, 500
+Send {Lbutton Up}
+MouseClick, left, 1280, 1118            ; Done
+}
+else if (rand = "6")
+{
+MouseClick, left, 1921, 592            ; Weapon Option
+Sleep, 300
+MouseClick, left, 1556, 696 ;Randomize
+Sleep, 300
+MouseClick, left, 2126, 1406            ; Forge
+Sleep, 300
+MouseMove, 1566, 607
+Send {Lbutton Down}
+Sleep, 500
+MouseMoveLinear(1566,607, 1376, 807, 700)
+Sleep, 500
+Send {Lbutton Up}
+MouseClick, left, 1280, 1118            ; Done
+}
+else if (rand = "7")
+{
+MouseClick, left, 584, 901            ; Weapon Option
+Sleep, 300
+MouseClick, left, 1556, 696 ;Randomize
+Sleep, 300
+MouseClick, left, 2126, 1406            ; Forge
+Sleep, 300
+MouseMove, 1566, 607
+Send {Lbutton Down}
+Sleep, 500
+MouseMoveLinear(1566,607, 1376, 807, 700)
+Sleep, 500
+Send {Lbutton Up}
+MouseClick, left, 1280, 1118            ; Done
+}
+else if (rand = "8")
+{
+MouseClick, left, 840, 883            ; Weapon Option
+Sleep, 300
+MouseClick, left, 1556, 696 ;Randomize
+Sleep, 300
+MouseClick, left, 2126, 1406            ; Forge
+Sleep, 300
+MouseMove, 1566, 607
+Send {Lbutton Down}
+Sleep, 500
+MouseMoveLinear(1566,607, 1376, 807, 700)
+Sleep, 500
+Send {Lbutton Up}
+MouseClick, left, 1280, 1118            ; Done
+}
+else if (rand = "9")
+{
+MouseClick, left, 1125, 884            ; Weapon Option
+Sleep, 300
+MouseClick, left, 1556, 696 ;Randomize
+Sleep, 300
+MouseClick, left, 2126, 1406            ; Forge
+Sleep, 300
+MouseMove, 1566, 607
+Send {Lbutton Down}
+Sleep, 500
+MouseMoveLinear(1566,607, 1376, 807, 700)
+Sleep, 500
+Send {Lbutton Up}
+MouseClick, left, 1280, 1118            ; Done
+}
+else if (rand = "10")
+{
+MouseClick, left, 1387, 867            ; Weapon Option
+Sleep, 300
+MouseClick, left, 1556, 696 ;Randomize
+Sleep, 300
+MouseClick, left, 2126, 1406            ; Forge
+Sleep, 300
+MouseMove, 1566, 607
+Send {Lbutton Down}
+Sleep, 500
+MouseMoveLinear(1566,607, 1376, 807, 700)
+Sleep, 500
+Send {Lbutton Up}
+MouseClick, left, 1280, 1118            ; Done
+}
+else if (rand = "11")
+{
+MouseClick, left, 1655, 884            ; Weapon Option
+Sleep, 300
+MouseClick, left, 1556, 696 ;Randomize
+Sleep, 300
+MouseClick, left, 2126, 1406            ; Forge
+Sleep, 300
+MouseMove, 1566, 607
+Send {Lbutton Down}
+Sleep, 500
+MouseMoveLinear(1566,607, 1376, 807, 700)
+Sleep, 500
+Send {Lbutton Up}
+MouseClick, left, 1280, 1118            ; Done
+}
+else if (rand = "12")
+{
+MouseClick, left, 1917, 883            ; Weapon Option
+Sleep, 300
+MouseClick, left, 1556, 696 ;Randomize
+Sleep, 300
+MouseClick, left, 2126, 1406            ; Forge
+Sleep, 300
+MouseMove, 1566, 607
+Send {Lbutton Down}
+Sleep, 500
+MouseMoveLinear(1566,607, 1376, 807, 700)
+Sleep, 500
+Send {Lbutton Up}
+MouseClick, left, 1280, 1118            ; Done
+}
 Return
 ;_███████╗███████
 
